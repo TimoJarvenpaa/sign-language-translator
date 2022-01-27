@@ -1,13 +1,45 @@
 # Sign Language Translator
 
-## Usage
+## Table of Contents
 
-In the project directory, you can run:
+- [Technologies and Resources](#technologies-and-resources)
 
-`npm start`
+- [Installation and Usage](#installation-and-usage)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Contributors](#contributors)
+
+## Technologies and Resources
+
+The project is implemented using the following technologies and resources:
+
+- React/Redux
+
+- Bootstrap
+- Material Icons
+
+## Installation and Usage
+
+**NOTE:** You will need _node_ and _npm_ installed on your machine
+
+1. Clone the project repository:
+
+```sh
+git clone https://github.com/TimoJarvenpaa/sign-language-translator.git
+```
+
+2. Install the dependencies while inside the project directory:
+
+```sh
+npm install
+```
+
+3. Start server:
+
+```sh
+npm start
+```
+
+After starting the server, you can access the application by navigating to `localhost:3000` on your browser.
 
 ## Contributors
 
