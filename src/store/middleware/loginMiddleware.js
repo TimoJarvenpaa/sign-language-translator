@@ -18,7 +18,7 @@ export const loginMiddleware =
 					dispatch(loginSuccessAction(user));
 				})
 				.catch(error => {
-					dispatch(loginErrorAction(error));
+					dispatch(loginErrorAction(error.message));
 				});
 		}
 

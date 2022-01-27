@@ -37,7 +37,7 @@ const LoginForm = () => {
 			</form>
 
 			{loginError && (
-				<div class="alert alert-danger" role="alert">
+				<div className="alert alert-danger" role="alert">
 					<p className="d-flex mb-0">
 						<span className="material-icons">error</span>&nbsp;
 						<span>{loginError}</span>
