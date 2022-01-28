@@ -1,24 +1,49 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loginAttemptAction } from "../../store/actions/loginActions";
+
 const LoginForm = () => {
+	const [username, setUsername] = useState("");
+	const dispatch = useDispatch();
+	const { loginError } = useSelector(state => state.login);
+
+	const onInputChange = e => {
+		setUsername(e.target.value);
+	};
+
+	const onLoginSubmit = e => {
+		e.preventDefault();
+		dispatch(loginAttemptAction(username));
+	};
+
 	return (
 		<div className="LoginForm">
-			<div className="input-group w-50">
-				<span className="input-group-text" id="username-icon">
-					@
-				</span>
-				<input
-					type="text"
-					className="form-control"
-					placeholder="'What's your name?"
-					aria-describedby="username-icon username-button"
-				/>
-				<button
-					className="btn"
-					type="submit"
-					aria-describedby="username-button"
-				>
-					:)
+			<form onSubmit={onLoginSubmit} className="mt-3">
+				<div className="mb-3">
+					<label htmlFor="username" className="form-label">
+						Username
+					</label>
+					<input
+						id="username"
+						type="text"
+						placeholder="Enter your username"
+						onChange={onInputChange}
+						className="form-control"
+					/>
+				</div>
+				<button type="submit" className="btn btn-primary btn-lg">
+					Login
 				</button>
-			</div>
+			</form>
+
+			{loginError && (
+				<div className="alert alert-danger" role="alert">
+					<p className="d-flex mb-0">
+						<span className="material-icons">error</span>&nbsp;
+						<span>{loginError}</span>
+					</p>
+				</div>
+			)}
 		</div>
 	);
 };
