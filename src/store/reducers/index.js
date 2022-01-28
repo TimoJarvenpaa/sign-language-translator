@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 import { ACTION_SESSION_CLEAR } from "../actions/sessionActions";
 import { loginReducer } from "./loginReducer";
 import { sessionReducer } from "./sessionReducer";
+import { registerReducer } from "./registerReducer";
 
 const appReducer = combineReducers({
   login: loginReducer,
-  session: sessionReducer
+  session: sessionReducer,
+  register: registerReducer
 });
 
 const rootReducer = (state, action) => {
