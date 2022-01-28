@@ -3,11 +3,13 @@ import { ACTION_SESSION_CLEAR } from "../actions/sessionActions";
 import { loginReducer } from "./loginReducer";
 import { sessionReducer } from "./sessionReducer";
 import { registerReducer } from "./registerReducer";
+import { translationReducer } from "./translationReducer";
 
 const appReducer = combineReducers({
   login: loginReducer,
   session: sessionReducer,
-  register: registerReducer
+  register: registerReducer,
+  translation: translationReducer
 });
 
 const rootReducer = (state, action) => {

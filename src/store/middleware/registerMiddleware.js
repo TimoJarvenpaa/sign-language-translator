@@ -5,7 +5,7 @@ import {
   registerErrorAction,
   registerSuccessAction,
 } from "../actions/registerActions";
-import { sessionSetAction } from "../actions/sessionActions";
+//import { sessionSetAction } from "../actions/sessionActions";
 
 export const registerMiddleware =
   ({ dispatch }) =>

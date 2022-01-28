@@ -6,6 +6,7 @@ import {
   sessionClearAction,
   sessionSetAction,
 } from "../actions/sessionActions";
+import { translationsSetAction } from "../actions/translationActions";
 
 export const sessionMiddleware =
   ({ dispatch }) =>
@@ -24,6 +25,7 @@ export const sessionMiddleware =
 
     if (action.type === ACTION_SESSION_SET) {
       localStorage.setItem("slt-session", JSON.stringify(action.payload));
+      dispatch(translationsSetAction(action.payload.translations));
     }
 
     if (action.type === ACTION_SESSION_CLEAR) {
