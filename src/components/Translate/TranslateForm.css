@@ -1,8 +1,8 @@
-.login-form {
+.translate-form {
 	border-radius: 20px !important;
 }
 
-.login-input-icon {
+.translate-input-icon {
 	width: 60px;
 	display: flex;
 	justify-content: center;
@@ -15,19 +15,19 @@
 	background-color: #efefef !important;
 }
 
-.login-input {
+.translate-input {
 	height: 60px;
 	border: 3px solid #969696 !important;
 	background-color: #efefef !important;
 }
 
-.login-button {
+.translate-button {
 	border: 3px solid #969696 !important;
 	border-radius: 0 50% 50% 0 !important;
 	background-color: #efefef !important;
 }
 
-.login-button-icon {
+.translate-button-icon {
 	display: flex;
 	align-items: center;
 	background-color: #845ec2;
