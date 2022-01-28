@@ -5,6 +5,7 @@ import { loginAttemptAction } from "../../store/actions/loginActions";
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const dispatch = useDispatch();
+	const { loggedIn } = useSelector(state => state.session);
 	const { loginError } = useSelector(state => state.login);
 
 	const onInputChange = e => {
