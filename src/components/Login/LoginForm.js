@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAttemptAction } from "../../store/actions/loginActions";
 import AppContainer from "../../hoc/AppContainer";
@@ -46,6 +47,7 @@ const LoginForm = () => {
 							<span className="login-button-icon material-icons">east</span>
 						</button>
 					</div>
+					<Link to="/register">Register now</Link>
 					{loginError && (
 						<div className="mt-3 px-3" role="alert">
 							<p className="d-flex mb-0 text-danger">
