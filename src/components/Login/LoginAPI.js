@@ -8,11 +8,10 @@ export const LoginAPI = {
 				throw new Error(error);
 			}
 			const data = await response.json();
-			console.log(data);
 			if (!Object.keys(data).length) {
 				throw new Error("Username does not exist");
 			}
-			return data;
+			return data[0];
 		});
 	},
 };
