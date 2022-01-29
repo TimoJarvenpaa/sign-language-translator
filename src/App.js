@@ -4,7 +4,7 @@ import Register from "./components/Register/Register";
 import Translate from "./components/Translate/Translate";
 import Profile from "./components/Profile/Profile";
 import NotFound from "./components/NotFound/NotFound";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
 	return (
