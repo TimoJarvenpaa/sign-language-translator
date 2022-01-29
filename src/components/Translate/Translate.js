@@ -1,7 +1,9 @@
+import TranslateForm from "./TranslateForm";
+
 const Translate = () => {
 	return (
 		<div className="Translate">
-			<h1>Translate</h1>
+			<TranslateForm />
 		</div>
 	);
 };

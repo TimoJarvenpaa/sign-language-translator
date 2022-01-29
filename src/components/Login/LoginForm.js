@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAttemptAction } from "../../store/actions/loginActions";
 import AppContainer from "../../hoc/AppContainer";
@@ -23,6 +23,7 @@ const LoginForm = () => {
 	return (
 		<div className="LoginForm">
 			<AppContainer>
+				{loggedIn && <Navigate to="/translate" />}
 				<form
 					onSubmit={onLoginSubmit}
 					className="login-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5 bg-body"

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerAttemptAction } from "../../store/actions/registerActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./RegisterForm.css";
 
 const RegisterForm = () => {
-	const [newUsername, setNewUsername] = useState();
+	const [newUsername, setNewUsername] = useState("");
 	const dispatch = useDispatch();
+	const { loggedIn } = useSelector(state => state.session);
 	const { registerError } = useSelector(state => state.register);
 
 	const onInputChange = e => {
@@ -23,6 +24,7 @@ const RegisterForm = () => {
 	return (
 		<div className="RegisterForm">
 			<AppContainer>
+				{loggedIn && <Navigate to="/translate" />}
 				<form
 					onSubmit={onRegisterSubmit}
 					className="register-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5 bg-body"
