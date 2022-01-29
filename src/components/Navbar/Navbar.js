@@ -13,7 +13,7 @@ const Navbar = () => {
 
 	return (
 		<div className="Navbar">
-			<nav className="navbar shadow p-3 mb-5 bg-body">
+			<nav className="navbar shadow p-3 mb-5">
 				<AppContainer>
 					<h2 className="navbar-text navbar-brand">Lost in translation</h2>
 					<form className="d-flex">
