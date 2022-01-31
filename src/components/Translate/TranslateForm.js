@@ -17,15 +17,15 @@ const TranslateForm = () => {
 
 	const onTranslationSubmit = e => {
 		e.preventDefault();
-		const newTranslations = translations.concat(translation);
-		console.log(newTranslations);
-		console.log(id);
-		dispatch(
-			translationCreateAction({
-				translation: newTranslations,
-				id: id,
-			})
-		);
+		const translationObject = {
+			translation: translation,
+			deleted: 'false'
+		}
+		const newTranslations = translations.concat(translationObject);
+		dispatch(translationCreateAction({ 
+			translations: newTranslations,
+			id: id 
+		}));
 		setTranslation("");
 	};
 
