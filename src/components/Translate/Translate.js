@@ -22,7 +22,7 @@ const Translate = () => {
 		setTranslatedSigns([]);
 		const translationObject = {
 			translation: translation,
-			deleted: "false",
+			deleted: false,
 		};
 		const newTranslations = translations.concat(translationObject);
 		dispatch(

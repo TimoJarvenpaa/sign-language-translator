@@ -2,6 +2,10 @@
 	background-color: #ffc75f !important;
 }
 
+.navbar-link {
+	text-decoration: none;
+}
+
 .navbar-text {
 	color: #fafafa;
 	font-size: 26px;
@@ -10,7 +14,11 @@
 .user-button {
 	display: flex;
 	align-items: center;
-	color: #fafafa;
+	color: #262626 !important;
+}
+
+.user-button:focus {
+	box-shadow: none !important;
 }
 
 .user-button:hover {
@@ -22,7 +30,7 @@
 }
 
 .user-button-icon {
-	border: 1px solid #fafafa !important;
+	border: 1px solid #262626 !important;
 	border-radius: 50%;
 	padding: 10px;
 }

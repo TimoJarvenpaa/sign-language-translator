@@ -60,7 +60,7 @@ const RegisterForm = () => {
 					)}
 					<div className="register-footer px-4 py-1">
 						<Link to="/" className="register-footer-link">
-							Login
+							Already registered? Log in here.
 						</Link>
 					</div>
 				</form>

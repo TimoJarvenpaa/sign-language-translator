@@ -26,7 +26,6 @@ const LoginForm = () => {
 				{loggedIn && <Navigate to="/translate" />}
 				<form
 					onSubmit={onLoginSubmit}
-					/*px-4 pb-5 p3*/
 					className="login-form mt-3 pt-1 shadow mb-5 bg-body"
 				>
 					<div className="login-container input-group pt-4 px-4 pb-5">
@@ -60,7 +59,7 @@ const LoginForm = () => {
 					)}
 					<div className="login-footer px-4 py-1">
 						<Link to="/register" className="login-footer-link">
-							Register now
+							Don't have an account? Register here.
 						</Link>
 					</div>
 				</form>
