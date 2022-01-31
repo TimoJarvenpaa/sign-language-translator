@@ -1,5 +1,6 @@
 export const ACTION_TRANSLATION_SET = "[translation] SET";
 export const ACTION_TRANSLATION_CREATE = "[translation] CREATE";
+export const ACTION_TRANSLATION_CLEAR = "[translation] CLEAR";
 export const ACTION_TRANSLATION_CREATE_ERROR = "[translation] CREATE_ERROR";
 
 export const translationsSetAction = translations => ({
@@ -7,9 +8,14 @@ export const translationsSetAction = translations => ({
 	payload: translations,
 });
 
-export const translationCreateAction = translation => ({
+export const translationCreateAction = payload => ({
 	type: ACTION_TRANSLATION_CREATE,
-	payload: translation,
+	payload: payload,
+});
+
+export const translationClearAction = payload => ({
+	type: ACTION_TRANSLATION_CLEAR,
+	payload: payload,
 });
 
 export const translationCreateErrorAction = error => ({

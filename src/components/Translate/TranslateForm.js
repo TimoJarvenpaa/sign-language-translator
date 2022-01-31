@@ -17,11 +17,13 @@ const TranslateForm = () => {
 
 	const onTranslationSubmit = e => {
 		e.preventDefault();
-		const newTranslations = translations.concat(translation);
-		console.log(newTranslations)
-		console.log(id)
+		const translationObject = {
+			translation: translation,
+			deleted: 'false'
+		}
+		const newTranslations = translations.concat(translationObject);
 		dispatch(translationCreateAction({ 
-			translation: newTranslations,
+			translations: newTranslations,
 			id: id 
 		}));
 		setTranslation("");

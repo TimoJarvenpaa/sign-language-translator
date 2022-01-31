@@ -18,14 +18,17 @@ export const TranslateAPI = {
       return response.json();
     });
   },
-  clearTranslations(userId) {
+  clearTranslations(translations, userId) {
+    const deletedTranslations = translations.map(obj => {
+      return {...obj, deleted: true}
+    })
     return fetch(`${BASE_URL}/${userId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         "X-API-Key": API_KEY,
       },
-      body: JSON.stringify({ translations: [] }),
+      body: JSON.stringify({ translations: deletedTranslations }),
     }).then(async (response) => {
       if (!response.ok) {
         const { error = "An unknown error occurred" } = await response.json();
