@@ -35,3 +35,16 @@
 	padding: 8px;
 	color: #fff;
 }
+
+.login-footer {
+	background-color: #845ec2;
+	border-radius: 0 0 20px 20px;
+}
+
+.login-footer-link {
+	color: #fafafa;
+}
+
+.login-footer-link:hover {
+	color: #fafafa;
+}

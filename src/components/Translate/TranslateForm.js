@@ -35,7 +35,7 @@ const TranslateForm = () => {
 				{!loggedIn && <Navigate to="/" />}
 				<form
 					onSubmit={onTranslationSubmit}
-					className="translate-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5 bg-body"
+					className="translate-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5"
 				>
 					<div className="input-group pt-4">
 						<span className="translate-input-icon material-icons input-group-text">

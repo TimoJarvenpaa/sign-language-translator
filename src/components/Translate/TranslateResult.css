@@ -1,0 +1,13 @@
+.translate-result-container {
+	border-radius: 20px !important;
+}
+
+.translate-result-footer {
+	background-color: #845ec2;
+	border-radius: 0 0 20px 20px;
+}
+
+.translate-footer-text {
+	color: #fafafa;
+	margin-bottom: 0 !important;
+}

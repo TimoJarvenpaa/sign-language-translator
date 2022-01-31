@@ -26,9 +26,10 @@ const LoginForm = () => {
 				{loggedIn && <Navigate to="/translate" />}
 				<form
 					onSubmit={onLoginSubmit}
-					className="login-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5 bg-body"
+					/*px-4 pb-5 p3*/
+					className="login-form mt-3 pt-1 shadow mb-5 bg-body"
 				>
-					<div className="login-container input-group pt-4">
+					<div className="login-container input-group pt-4 px-4 pb-5">
 						<span className="login-input-icon material-icons input-group-text">
 							person_outline
 						</span>
@@ -48,7 +49,7 @@ const LoginForm = () => {
 							<span className="login-button-icon material-icons">east</span>
 						</button>
 					</div>
-					<Link to="/register">Register now</Link>
+
 					{loginError && (
 						<div className="mt-3 px-3" role="alert">
 							<p className="d-flex mb-0 text-danger">
@@ -57,6 +58,11 @@ const LoginForm = () => {
 							</p>
 						</div>
 					)}
+					<div className="login-footer px-4 py-1">
+						<Link to="/register" className="login-footer-link">
+							Register now
+						</Link>
+					</div>
 				</form>
 			</AppContainer>
 		</div>

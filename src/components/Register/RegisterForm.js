@@ -27,9 +27,9 @@ const RegisterForm = () => {
 				{loggedIn && <Navigate to="/translate" />}
 				<form
 					onSubmit={onRegisterSubmit}
-					className="register-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5 bg-body"
+					className="register-form mt-3 pt-1 shadow mb-5 bg-body"
 				>
-					<div className="input-group pt-4">
+					<div className="input-group pt-4 px-4 pb-5">
 						<span className="register-input-icon material-icons input-group-text">
 							person_outline
 						</span>
@@ -50,7 +50,6 @@ const RegisterForm = () => {
 							<span className="register-button-icon material-icons">east</span>
 						</button>
 					</div>
-					<Link to="/">Login</Link>
 					{registerError && (
 						<div className="mt-3 px-3" role="alert">
 							<p className="d-flex mb-0 text-danger">
@@ -59,6 +58,11 @@ const RegisterForm = () => {
 							</p>
 						</div>
 					)}
+					<div className="register-footer px-4 py-1">
+						<Link to="/" className="register-footer-link">
+							Login
+						</Link>
+					</div>
 				</form>
 			</AppContainer>
 		</div>
