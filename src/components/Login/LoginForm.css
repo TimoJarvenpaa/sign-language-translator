@@ -19,6 +19,7 @@
 	height: 60px;
 	border: 3px solid #969696 !important;
 	background-color: #efefef !important;
+	color: #555 !important;
 }
 
 .login-button {
@@ -36,6 +37,10 @@
 	color: #fff;
 }
 
+.login-button-icon:hover {
+	background-color: #6b4c9e;
+}
+
 .login-footer {
 	background-color: #845ec2;
 	border-radius: 0 0 20px 20px;
@@ -46,5 +51,5 @@
 }
 
 .login-footer-link:hover {
-	color: #fafafa;
+	color: #efefef;
 }

@@ -36,17 +36,15 @@ const Navbar = () => {
 						{loggedIn && (
 							<Link className="navbar-link" to="/profile">
 								<button className="user-button btn d-flex">
+									<span className="material-icons mx-1">person</span>
 									<span className="user-button-text">{username}</span>
-									<span className="user-button-icon material-icons">
-										person
-									</span>
 								</button>
 							</Link>
 						)}
 
 						{loggedIn && (
 							<button
-								className="logout-button btn me-2 d-flex"
+								className="logout-button btn d-flex"
 								type="button"
 								onClick={onLogoutClick}
 							>

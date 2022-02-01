@@ -23,23 +23,18 @@
 }
 
 .user-button:hover {
-	color: #fafafa;
+	color: #efefef !important;
 }
 
 .user-button-text {
 	padding-right: 10px;
 }
 
-.user-button-icon {
-	border: 2px solid #fafafa !important;
-	border-radius: 50%;
-	padding: 7px;
-}
-
 .logout-button {
 	align-items: center;
+	color: #fafafa !important;
 }
 
-.logout-button-icon {
-	color: #fafafa;
+.logout-button:hover {
+	color: #efefef !important;
 }

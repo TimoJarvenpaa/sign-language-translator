@@ -6,3 +6,7 @@
 	background-color: #845ec2 !important;
 	color: #fafafa !important;
 }
+
+.profile-button:hover {
+	background-color: #6b4c9e !important;
+}
