@@ -10,6 +10,7 @@ const RegisterForm = () => {
 	const dispatch = useDispatch();
 	const { loggedIn } = useSelector(state => state.session);
 	const { registerError } = useSelector(state => state.register);
+	const [error, setError] = useState("");
 
 	const onInputChange = e => {
 		setNewUsername(e.target.value);
@@ -18,6 +19,10 @@ const RegisterForm = () => {
 	const onRegisterSubmit = e => {
 		e.preventDefault();
 		dispatch(registerAttemptAction(newUsername));
+		setError(registerError);
+		setTimeout(() => {
+			setError("");
+		}, 5000);
 		setNewUsername("");
 	};
 
@@ -31,12 +36,12 @@ const RegisterForm = () => {
 				>
 					<div className="input-group pt-4 px-4 pb-5">
 						<span className="register-input-icon material-icons input-group-text">
-							person_outline
+							person
 						</span>
 						<input
 							id="username"
 							type="text"
-							placeholder="Register"
+							placeholder="Register your username"
 							onChange={onInputChange}
 							value={newUsername}
 							className="register-input form-control border-start-0 border-end-0 shadow-none"
@@ -50,8 +55,8 @@ const RegisterForm = () => {
 							<span className="register-button-icon material-icons">east</span>
 						</button>
 					</div>
-					{registerError && (
-						<div className="mt-3 px-3" role="alert">
+					{error && (
+						<div className="mb-3 px-4" role="alert">
 							<p className="d-flex mb-0 text-danger">
 								<span className="material-icons">error</span>&nbsp;
 								<span>{registerError}</span>

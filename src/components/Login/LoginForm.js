@@ -10,6 +10,7 @@ const LoginForm = () => {
 	const dispatch = useDispatch();
 	const { loggedIn } = useSelector(state => state.session);
 	const { loginError } = useSelector(state => state.login);
+	const [error, setError] = useState("");
 
 	const onInputChange = e => {
 		setUsername(e.target.value);
@@ -18,6 +19,10 @@ const LoginForm = () => {
 	const onLoginSubmit = e => {
 		e.preventDefault();
 		dispatch(loginAttemptAction(username));
+		setError(loginError);
+		setTimeout(() => {
+			setError("");
+		}, 5000);
 	};
 
 	return (
@@ -30,7 +35,7 @@ const LoginForm = () => {
 				>
 					<div className="login-container input-group pt-4 px-4 pb-5">
 						<span className="login-input-icon material-icons input-group-text">
-							person_outline
+							person
 						</span>
 						<input
 							id="username"
@@ -48,15 +53,15 @@ const LoginForm = () => {
 							<span className="login-button-icon material-icons">east</span>
 						</button>
 					</div>
-
-					{loginError && (
-						<div className="mt-3 px-3" role="alert">
+					{error && (
+						<div className="mb-4 px-4" role="alert">
 							<p className="d-flex mb-0 text-danger">
 								<span className="material-icons">error</span>&nbsp;
 								<span>{loginError}</span>
 							</p>
 						</div>
 					)}
+
 					<div className="login-footer px-4 py-1">
 						<Link to="/register" className="login-footer-link">
 							Don't have an account? Register here

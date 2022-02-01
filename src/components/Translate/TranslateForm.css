@@ -1,5 +1,5 @@
-.translate-form {
-	border-radius: 20px !important;
+.TranslateForm {
+	background-color: #ffc75f;
 }
 
 .translate-input-icon {
@@ -9,7 +9,7 @@
 	cursor: default;
 	color: #555 !important;
 	font-size: 26px !important;
-	border: 3px solid #969696 !important;
+	border: 3px solid #fafafa !important;
 	border-right: none !important;
 	border-radius: 50% 0 0 50% !important;
 	background-color: #efefef !important;
@@ -17,12 +17,12 @@
 
 .translate-input {
 	height: 60px;
-	border: 3px solid #969696 !important;
+	border: 3px solid #fafafa !important;
 	background-color: #efefef !important;
 }
 
 .translate-button {
-	border: 3px solid #969696 !important;
+	border: 3px solid #fafafa !important;
 	border-radius: 0 50% 50% 0 !important;
 	background-color: #efefef !important;
 }

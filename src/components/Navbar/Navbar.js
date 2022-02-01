@@ -35,7 +35,7 @@ const Navbar = () => {
 								<button className="user-button btn d-flex">
 									<span className="user-button-text">{username}</span>
 									<span className="user-button-icon material-icons">
-										person_outline
+										person
 									</span>
 								</button>
 							</Link>
@@ -43,11 +43,13 @@ const Navbar = () => {
 
 						{loggedIn && (
 							<button
-								className="btn me-2"
+								className="logout-button btn me-2 d-flex"
 								type="button"
 								onClick={onLogoutClick}
 							>
-								<span className="material-icons">logout</span>
+								<span className="logout-button-icon material-icons">
+									logout
+								</span>
 							</button>
 						)}
 					</form>
