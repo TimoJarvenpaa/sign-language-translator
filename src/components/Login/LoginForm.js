@@ -59,7 +59,7 @@ const LoginForm = () => {
 					)}
 					<div className="login-footer px-4 py-1">
 						<Link to="/register" className="login-footer-link">
-							Don't have an account? Register here.
+							Don't have an account? Register here
 						</Link>
 					</div>
 				</form>

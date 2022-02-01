@@ -14,10 +14,20 @@ const Navbar = () => {
 
 	return (
 		<div className="Navbar">
-			<nav className="navbar shadow p-3 mb-5">
+			<nav className="navbar shadow p-3">
 				<AppContainer>
 					<Link className="navbar-link" to="/translate">
-						<h2 className="navbar-text navbar-brand">Lost in translation</h2>
+						<h2 className="navbar-text navbar-brand">
+							{loggedIn && (
+								<img
+									className="mx-4 pb-2"
+									src="/assets/Logo.png"
+									alt="Navbar logo"
+									width="40px"
+								/>
+							)}
+							Lost in translation
+						</h2>
 					</Link>
 					<form className="d-flex">
 						{loggedIn && (
