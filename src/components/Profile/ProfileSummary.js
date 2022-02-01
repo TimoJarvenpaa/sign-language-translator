@@ -10,10 +10,14 @@ const ProfileSummary = ({
 }) => {
 	const dispatch = useDispatch();
 
+	// event handler for the logout button
 	const onLogoutClick = () => {
+		// dispatch the redux action for logging out i.e. clearing the session from local storage
 		dispatch(sessionLogoutAction());
 	};
 
+	// array that includes the latest ten translations that are not marked as deleted
+	// used to render the translation history of the user
 	const filteredAndSlicedTranslations = translations
 		.filter(t => t.deleted === false)
 		.slice(-10)

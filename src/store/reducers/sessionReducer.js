@@ -11,6 +11,9 @@ const initialState = {
   loggedIn: false,
 };
 
+// the code for the reducer is modified from the example project source code at
+// https://gitlab.com/sumodevelopment/react-txt-forum-client
+
 export const sessionReducer = (state = { ...initialState }, action) => {
   switch (action.type) {
     case ACTION_SESSION_SET:

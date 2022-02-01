@@ -5,21 +5,28 @@ import { loginAttemptAction } from "../../store/actions/loginActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./LoginForm.css";
 
+// a component responsible for login inputs and events
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const dispatch = useDispatch();
+	// property from the session redux state used for conditional rendering
 	const { loggedIn } = useSelector(state => state.session);
 	const { loginError } = useSelector(state => state.login);
 	const [error, setError] = useState("");
 
+	// updates the username state on input
 	const onInputChange = e => {
 		setUsername(e.target.value);
 	};
 
+	// event handler for the login button
 	const onLoginSubmit = e => {
 		e.preventDefault();
+		// dispatch the redux action for login attempt
 		dispatch(loginAttemptAction(username));
+		// display the potential error message from the redux state
 		setError(loginError);
+		// clear the error message after 5 seconds
 		setTimeout(() => {
 			setError("");
 		}, 5000);

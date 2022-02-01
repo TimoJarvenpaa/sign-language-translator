@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// a view displayed when trying to access undefined routes
 const NotFound = () => {
 	return (
 		<div className="NotFound">

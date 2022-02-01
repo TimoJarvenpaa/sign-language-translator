@@ -2,6 +2,7 @@ import AppContainer from "../../hoc/AppContainer";
 import LoginForm from "./LoginForm";
 import "./Login.css";
 
+// login view, default route i.e. "/"
 const Login = () => {
 	return (
 		<div className="Login">

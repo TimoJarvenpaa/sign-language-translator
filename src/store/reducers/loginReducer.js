@@ -7,6 +7,10 @@ const initialState = {
   loginAttempting: false,
   loginError: "",
 };
+
+// the code for the reducer is modified from the example project source code at
+// https://gitlab.com/sumodevelopment/react-txt-forum-client
+
 export const loginReducer = (state = { ...initialState }, action) => {
   switch (action.type) {
     case ACTION_LOGIN_ATTEMPT:
