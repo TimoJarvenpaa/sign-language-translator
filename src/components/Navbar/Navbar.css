@@ -7,8 +7,9 @@
 }
 
 .navbar-text {
+	font-family: "Love Ya Like A Sister", cursive;
 	color: #fafafa;
-	font-size: 26px;
+	font-size: 32px !important;
 }
 
 .user-button {

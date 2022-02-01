@@ -1,0 +1,20 @@
+.Register {
+	height: 100vh;
+	background: linear-gradient(
+		to bottom,
+		#ffc75f 0%,
+		#ffc75f 45%,
+		#fafafa 45%,
+		#fafafa 100%
+	);
+}
+
+.register-header-text {
+	align-items: center;
+	font-family: "Love Ya Like A Sister", cursive;
+	color: #fafafa;
+}
+
+.register-header-text h1 {
+	font-size: 70px;
+}
