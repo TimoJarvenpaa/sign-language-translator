@@ -12,11 +12,11 @@ const TranslateForm = props => {
 				{!loggedIn && <Navigate to="/" />}
 				<form
 					onSubmit={props.onTranslationSubmit}
-					className="translate-form mt-3 pt-1 px-4 pb-5 shadow p-3 mb-5"
+					className="translate-form px-4 py-5 mb-5"
 				>
-					<div className="input-group pt-4">
+					<div className="input-group">
 						<span className="translate-input-icon material-icons input-group-text">
-							person_outline
+							keyboard_alt
 						</span>
 						<input
 							id="username"

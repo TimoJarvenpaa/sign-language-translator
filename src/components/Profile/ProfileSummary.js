@@ -22,10 +22,10 @@ const ProfileSummary = ({
 	return (
 		<div className="ProfileSummary">
 			<AppContainer>
-				<div className="profile-summary p-4 shadow mb-5">
+				<div className="profile-summary mt-5 p-4 shadow mb-5">
 					<div className="profile-details p-3">
 						<h1>{username}</h1>
-						<div className="py-3">
+						<div className="pt-5 pb-3">
 							<button
 								className="profile-button btn"
 								onClick={onClearTranslationsClick}
@@ -43,7 +43,7 @@ const ProfileSummary = ({
 
 					<div className="profile-history mt-3 p-3">
 						<h3>Translation history</h3>
-						<ul className="list-group list-group-flush">
+						<ul className="list-group list-group-flush pt-3">
 							{filteredAndSlicedTranslations.map((translationObject, index) => {
 								return (
 									<li

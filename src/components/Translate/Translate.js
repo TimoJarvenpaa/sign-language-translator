@@ -46,7 +46,7 @@ const Translate = () => {
 			if (alphabet.includes(letter.toLowerCase())) {
 				translationSigns.push(
 					<img
-						src={baseSrc + letter + ".png"}
+						src={baseSrc + letter.toLowerCase() + ".png"}
 						key={index + letter}
 						alt={letter}
 					/>

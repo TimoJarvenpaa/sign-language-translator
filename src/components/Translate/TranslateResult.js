@@ -5,7 +5,7 @@ const TranslateResult = ({ translation, translatedSigns }) => {
 	return (
 		<div className="TranslateResult">
 			<AppContainer>
-				<div className="translate-result-container shadow mb-5">
+				<div className="translate-result-container mx-4 shadow mb-5">
 					<div className="translate-result px-4 py-4">
 						{translatedSigns.map(sign => sign)}
 					</div>
