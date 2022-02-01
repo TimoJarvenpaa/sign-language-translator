@@ -1,12 +1,40 @@
 # Sign Language Translator
 
+[Live Demo]() (Hosted on _Heroku_)
+
+[REST API]() (Hosted on _Heroku_)
+
+[Component Tree Image](docs/ct-sign-language-translator.png)
+
 ## Table of Contents
+
+- [General Information](#general-information)
 
 - [Technologies and Resources](#technologies-and-resources)
 
 - [Installation and Usage](#installation-and-usage)
 
 - [Contributors](#contributors)
+
+## General Information
+
+**Login/Register view**
+
+NOTE: User cannot see these views if _logged in_
+
+The application starts from login view if user is not logged in. The login view contains text input where user can enter their username to log in if username already exists in REST API. If username does not exist in REST API, user can create one on register view. When user has successfully logged in, the translate view will be shown.
+
+**Translate view**
+
+NOTE: User cannot see this view if _not logged in_
+
+The translate view is main view for logged in users. This view has two separate components, translation input and result field. User can start translating words and sentences by typing to translate input and clicking button. The result will be shown on result field below as images. Translations will be saved to translation history which can be found from profile view.
+
+**Profile view**
+
+NOTE: User cannot see this view if _not logged in_
+
+The profile view displays username which is currently logged in and translation history. In translation history user can view last 10 translations from newest to oldest. View also contains two buttons, Clear translation history and Log out. By clicking Clear translation history button, entire translation history will be hidden. Log out button ends the current session and user will be redirected back to login view.
 
 ## Technologies and Resources
 
