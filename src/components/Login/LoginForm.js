@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { loginAttemptAction } from "../../store/actions/loginActions";
+import { loginAttemptAction, loginErrorAction } from "../../store/actions/loginActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./LoginForm.css";
 
@@ -11,8 +11,8 @@ const LoginForm = () => {
 	const dispatch = useDispatch();
 	// property from the session redux state used for conditional rendering
 	const { loggedIn } = useSelector(state => state.session);
+	// property from the login redux state used for displaying error messages
 	const { loginError } = useSelector(state => state.login);
-	const [error, setError] = useState("");
 
 	// updates the username state on input
 	const onInputChange = e => {
@@ -24,11 +24,9 @@ const LoginForm = () => {
 		e.preventDefault();
 		// dispatch the redux action for login attempt
 		dispatch(loginAttemptAction(username));
-		// display the potential error message from the redux state
-		setError(loginError);
-		// clear the error message after 5 seconds
+		// clear the potential error message after 5 seconds
 		setTimeout(() => {
-			setError("");
+			dispatch(loginErrorAction(""));
 		}, 5000);
 	};
 
@@ -60,7 +58,7 @@ const LoginForm = () => {
 							<span className="login-button-icon material-icons">east</span>
 						</button>
 					</div>
-					{error && (
+					{loginError && (
 						<div className="mb-4 px-4" role="alert">
 							<p className="d-flex mb-0 text-danger">
 								<span className="material-icons">error</span>&nbsp;

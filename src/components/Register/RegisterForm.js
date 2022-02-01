@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { registerAttemptAction } from "../../store/actions/registerActions";
+import { registerAttemptAction, registerErrorAction } from "../../store/actions/registerActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./RegisterForm.css";
 
@@ -11,8 +11,8 @@ const RegisterForm = () => {
 	const dispatch = useDispatch();
 	// property from the session redux state used for conditional rendering
 	const { loggedIn } = useSelector(state => state.session);
+	// property from the register redux state used for displaying error messages
 	const { registerError } = useSelector(state => state.register);
-	const [error, setError] = useState("");
 
 	// updates the newUsername state on input
 	const onInputChange = e => {
@@ -24,11 +24,9 @@ const RegisterForm = () => {
 		e.preventDefault();
 		// dispatch the redux action for register attempt
 		dispatch(registerAttemptAction(newUsername));
-		// display the potential error message from the redux state
-		setError(registerError);
 		// clear the error message after 5 seconds
 		setTimeout(() => {
-			setError("");
+			dispatch(registerErrorAction(""));
 		}, 5000);
 		// clear the input field after the button click
 		setNewUsername("");
@@ -63,7 +61,7 @@ const RegisterForm = () => {
 							<span className="register-button-icon material-icons">east</span>
 						</button>
 					</div>
-					{error && (
+					{registerError && (
 						<div className="mb-3 px-4" role="alert">
 							<p className="d-flex mb-0 text-danger">
 								<span className="material-icons">error</span>&nbsp;
