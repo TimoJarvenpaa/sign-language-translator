@@ -1,5 +1,8 @@
 # Sign Language Translator
 
+![GitHub repo size](https://img.shields.io/github/repo-size/TimoJarvenpaa/sign-language-translator)
+
+
 [Live Demo]() (Hosted on _Heroku_)
 
 [REST API]() (Hosted on _Heroku_)
