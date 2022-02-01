@@ -3,7 +3,9 @@ import { Navigate } from "react-router-dom";
 import AppContainer from "../../hoc/AppContainer";
 import "./TranslateForm.css";
 
+// a component responsible for translation related inputs and actions 
 const TranslateForm = props => {
+	// property from the session redux state used for conditional rendering
 	const { loggedIn } = useSelector(state => state.session);
 
 	return (

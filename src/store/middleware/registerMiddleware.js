@@ -5,7 +5,10 @@ import {
   registerErrorAction,
   registerSuccessAction,
 } from "../actions/registerActions";
-//import { sessionSetAction } from "../actions/sessionActions";
+
+// the code for this middleware is modified from the example project source code at
+// https://gitlab.com/sumodevelopment/react-txt-forum-client
+
 
 export const registerMiddleware =
   ({ dispatch }) =>
@@ -14,17 +17,20 @@ export const registerMiddleware =
     next(action);
 
     if (action.type === ACTION_REGISTER_ATTEMPT) {
+      // use the RegisterAPI, payload is the username
       RegisterAPI.register(action.payload)
+        // API returns an user object
         .then((user) => {
+          // succesful registration
           dispatch(registerSuccessAction(user));
         })
         .catch((error) => {
+          // unsuccessful registration
           dispatch(registerErrorAction(error.message));
         });
     }
 
     if (action.type === ACTION_REGISTER_SUCCESS) {
-      // DO NOT LOG IN AUTOMATICALLY
-      //dispatch(sessionSetAction(action.payload));
+      // do nothing since we don't want to log the user in automatically
     }
   };

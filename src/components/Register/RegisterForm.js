@@ -5,24 +5,32 @@ import { registerAttemptAction } from "../../store/actions/registerActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./RegisterForm.css";
 
+// a component responsible for register inputs and events
 const RegisterForm = () => {
 	const [newUsername, setNewUsername] = useState("");
 	const dispatch = useDispatch();
+	// property from the session redux state used for conditional rendering
 	const { loggedIn } = useSelector(state => state.session);
 	const { registerError } = useSelector(state => state.register);
 	const [error, setError] = useState("");
 
+	// updates the newUsername state on input
 	const onInputChange = e => {
 		setNewUsername(e.target.value);
 	};
 
+	// event handler for the register button
 	const onRegisterSubmit = e => {
 		e.preventDefault();
+		// dispatch the redux action for register attempt
 		dispatch(registerAttemptAction(newUsername));
+		// display the potential error message from the redux state
 		setError(registerError);
+		// clear the error message after 5 seconds
 		setTimeout(() => {
 			setError("");
 		}, 5000);
+		// clear the input field after the button click
 		setNewUsername("");
 	};
 

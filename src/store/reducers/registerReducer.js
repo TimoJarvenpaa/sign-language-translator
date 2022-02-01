@@ -9,6 +9,9 @@ const initialState = {
   registerError: "",
 };
 
+// the code for the reducer is modified from the example project source code at
+// https://gitlab.com/sumodevelopment/react-txt-forum-client
+
 export const registerReducer = (state = { ...initialState }, action) => {
   switch (action.type) {
     case ACTION_REGISTER_ATTEMPT:

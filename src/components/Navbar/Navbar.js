@@ -4,11 +4,14 @@ import { sessionLogoutAction } from "../../store/actions/sessionActions";
 import AppContainer from "../../hoc/AppContainer";
 import "./Navbar.css";
 
+// navbar component that includes links to the translation view, profile view and a logout button
 const Navbar = () => {
 	const dispatch = useDispatch();
 	const { username, loggedIn } = useSelector(state => state.session);
 
+	// event handler for the logout button
 	const onLogoutClick = () => {
+		// dispatch the redux action for logging out i.e. clearing the session from local storage
 		dispatch(sessionLogoutAction());
 	};
 

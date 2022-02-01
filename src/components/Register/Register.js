@@ -2,6 +2,7 @@ import AppContainer from "../../hoc/AppContainer";
 import RegisterForm from "./RegisterForm";
 import "./Register.css";
 
+// register view, route "/register"
 const Register = () => {
 	return (
 		<div className="Register">

@@ -1,6 +1,7 @@
 import AppContainer from "../../hoc/AppContainer";
 import "./TranslateResult.css";
 
+// a component responsible for displaying the sign language images for the current translation
 const TranslateResult = ({ translation, translatedSigns }) => {
 	return (
 		<div className="TranslateResult">
